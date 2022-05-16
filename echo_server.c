@@ -32,7 +32,7 @@ static int get_request(struct socket *sock, unsigned char *buf, size_t size)
      * TODO: during benchmarking, such printk() is useless and lead to worse
      * result. Add a specific build flag for these printk() would be good.
      */
-    printk(MODULE_NAME ": start get response\n");
+    printk(MODULE_NAME ": start get request\n");
     /* get msg */
     length = kernel_recvmsg(sock, &msg, &vec, size, size, msg.msg_flags);
     printk(MODULE_NAME ": get request = %s\n", buf);
